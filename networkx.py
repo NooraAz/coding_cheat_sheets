@@ -5,3 +5,6 @@ nx.convert_matrix.from_numpy_matrix(arr)
 
 # drawing with positions 
 nx.draw(G, pos=nx.kamada_kawai_layout(G))
+
+# remove a node
+G.remove_node(n)
