@@ -7,3 +7,6 @@ mystring.strip()
 
 # making a list from a string (by comma for example)
 mystring.split(',')
+
+# sort a list based on second value of sublist
+mylist.sort(key= lambda x:x[1])
