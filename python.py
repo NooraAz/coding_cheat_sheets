@@ -10,3 +10,8 @@ mystring.split(',')
 
 # sort a list based on second value of sublist
 mylist.sort(key= lambda x:x[1])
+
+# text justification
+text = 'Have a good day!"
+text.ljust(5)
+text.rjust(5)
