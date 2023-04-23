@@ -8,3 +8,7 @@ arr = np.full((2,2),False)
 
 # gettig unique values and their count from an a list
 values, counts = np.unique(arr, return_counts= True)
+
+# range of float numbers
+# (start,stop,step)
+np.arange(0,1,0.1)
