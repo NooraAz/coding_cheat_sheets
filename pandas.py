@@ -20,3 +20,6 @@ df.sort_values(by=['col1'])
 
 # adding a row to end of dataframe
 df.loc[len(df)] = [value1,value2,value3]
+
+# correlation between two columns
+
