@@ -12,3 +12,8 @@ G.remove_node(n)
 # remove edges in an edge list
 edge_list = [(u1,v1),(u2,v2)]
 G.remove_edges_from(edge_list)
+
+# getting neighbors of a node
+G.neighbors(n) 
+# it returns an iterable object, so you can easily convert it to list 
+list(G.neighbors(n))
