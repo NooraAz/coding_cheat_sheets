@@ -5,3 +5,7 @@ changing transparency of sticks (1 is invisible)
 setting the digit numbers of distance calculations
 
     set label_distance_digits, 2
+    
+show all NMR states
+
+    set all_states, on  
