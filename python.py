@@ -11,6 +11,9 @@ mystring.split(',')
 # sort a list based on second value of sublist
 mylist.sort(key= lambda x:x[1])
 
+# sorting sublists of a list
+sorted_lst = [sorted(sublist) for sublist in lst]
+
 # text justification
 text = 'Have a good day!"
 text.ljust(5)
