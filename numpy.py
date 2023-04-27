@@ -12,3 +12,7 @@ values, counts = np.unique(arr, return_counts= True)
 # range of float numbers
 # (start,stop,step)
 np.arange(0,1,0.1)
+
+# deleting a row or column
+numpy.delete(arr, row_index, axis=0)
+numpy.delete(arr, col_index, axis=1)
