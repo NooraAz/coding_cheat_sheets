@@ -1,3 +1,8 @@
+# importing pose
+## from file
+pyrosetta.rosetta.core.import_pose.pose_from_file(file_path)
+
+
 # getting coordinates of an atom in pose
 mypose.residue(i).xyz(mypose.residue(i).atom_index('O'))
 
