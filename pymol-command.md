@@ -9,3 +9,7 @@ setting the digit numbers of distance calculations
 show all NMR states
 
     set all_states, on  
+
+split NMR states
+
+    split_states object_name
