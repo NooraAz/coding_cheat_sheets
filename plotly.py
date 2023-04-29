@@ -14,6 +14,10 @@ for n,l in zip(names,lists):
 fig.add_hline(y=1)
 fig.add_vline(x=1)
 
+# horizontal and vertical rectangle
+fig.add_hrect(y0=0, y1=1, line_width=0, fillcolor="red", opacity=0.2)
+fig.add_vrect(y0=0, y1=1, line_width=0, fillcolor="red", opacity=0.2)
+
 # setting range of axes
 fig.update_xaxes(range=[0,1])
 fig.update_yaxes(range=[0,1])
