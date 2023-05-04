@@ -4,6 +4,7 @@ df = pd.DataFrame()
 
 # getting rows by their index
 df.take([0,1,2,3])
+df.iloc[[4]]
 
 # getting rows by their column value
 ## if column value is in this list
