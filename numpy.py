@@ -16,3 +16,6 @@ np.arange(0,1,0.1)
 # deleting a row or column
 numpy.delete(arr, row_index, axis=0)
 numpy.delete(arr, col_index, axis=1)
+
+# add values of two lists together (one by one)
+result = np.add(list1,list2)
