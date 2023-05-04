@@ -26,3 +26,6 @@ df.loc[len(df)] = [value1,value2,value3]
 
 # removing rows
 df = df.drop([0, 1])
+
+# reset indices after removing rows or changing order
+df.reset_index(inplace=True)
