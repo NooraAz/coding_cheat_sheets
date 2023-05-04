@@ -30,3 +30,6 @@ fig.update_layout(plot_bgcolor='rgba(0, 0, 0, 0)')
 
 # using themes
 fig.update_layout(template="simple_white") 
+
+# line plot
+fig = px.line(df, x="year", y="lifeExp", title='Life expectancy in Canada')
