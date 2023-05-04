@@ -24,3 +24,5 @@ df.loc[len(df)] = [value1,value2,value3]
 
 # correlation between two columns
 
+# removing rows
+df = df.drop([0, 1])
