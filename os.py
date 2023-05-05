@@ -3,6 +3,9 @@ import os
 # getting list of all files in a path
 files = os.listdir(path)
 
+# getting list of files with specific extenzion in path
+text_files = [f for f in os.listdir(path) if f.endswith('.txt')]
+
 # split file name from extension
 # -> ['file','.txt']
 os.path.splittext('file.txt') 
