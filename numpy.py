@@ -19,3 +19,8 @@ numpy.delete(arr, col_index, axis=1)
 
 # add values of two lists together (one by one)
 result = np.add(list1,list2)
+
+# matrix multiplication
+result = np.matmul(arr1,arr2)
+result = np.dot(arr1,arr2)
+result = np.multiply(arr1,arr2)
