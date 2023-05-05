@@ -24,3 +24,9 @@ result = np.add(list1,list2)
 result = np.matmul(arr1,arr2)
 result = np.dot(arr1,arr2)
 result = np.multiply(arr1,arr2)
+
+# matrix transpose
+# needs double bracket for 1D lists
+ arr.transpose()
+ arr.T
+
