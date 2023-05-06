@@ -18,3 +18,6 @@ sorted_lst = [sorted(sublist) for sublist in lst]
 text = 'Have a good day!"
 text.ljust(5)
 text.rjust(5)
+
+# path to a module
+print(my_module.__file__)
