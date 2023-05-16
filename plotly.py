@@ -28,6 +28,9 @@ fig.add_vrect(y0=0, y1=1, line_width=0, fillcolor="red", opacity=0.2)
 fig.update_xaxes(range=[0,1])
 fig.update_yaxes(range=[0,1])
 
+# plot size
+fig = px.scatter(df,x='x',y='y',width=800, height=400)
+
 # treating x as catogorical data
 fig.update_layout(xaxis_type='category')
 
