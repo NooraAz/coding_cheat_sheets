@@ -13,3 +13,9 @@ show all NMR states
 split NMR states
 
     split_states object_name
+
+rotating molecule (based on origion)
+
+    rotate x, 45, object-name
+    rotate y, 45, object-name 
+    rotate z, 45, object-name 
