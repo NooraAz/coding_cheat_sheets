@@ -34,6 +34,9 @@ fig.update_layout(xaxis_type='category')
 # background color
 fig.update_layout(plot_bgcolor='rgba(0, 0, 0, 0)')
 
+# points (/traces) color
+fig.update_traces(marker_color='rgba(255, 182, 193, .9)')
+
 # using themes
 fig.update_layout(template="simple_white") 
 
