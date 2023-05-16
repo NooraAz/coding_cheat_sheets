@@ -40,6 +40,9 @@ fig.update_layout(plot_bgcolor='rgba(0, 0, 0, 0)')
 # points (/traces) color
 fig.update_traces(marker_color='rgba(255, 182, 193, .9)')
 
+# changing color of histogram bars
+fig = px.histogram(df, x="total_bill", color="sex" ,color_discrete_sequence=['red','blue','indianred'])
+
 # using themes
 fig.update_layout(template="simple_white") 
 
