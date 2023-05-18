@@ -31,8 +31,11 @@ fig.update_yaxes(range=[0,1])
 # plot size
 fig = px.scatter(df,x='x',y='y',width=800, height=400)
 
-# treating x as catogorical data
+# setting the data type
+# options are 'linear' (numerical), 'category', 'date'
 fig.update_layout(xaxis_type='category')
+# or
+fig.update_xaxis(type='category')
 
 # background color
 fig.update_layout(plot_bgcolor='rgba(0, 0, 0, 0)')
@@ -46,4 +49,6 @@ fig = px.histogram(df, x="total_bill", color="sex" ,color_discrete_sequence=['re
 # using themes
 fig.update_layout(template="simple_white") 
 
+# animating the plot
+px.scatter(df, x="x", y="y", animation_frame="time", animation_group="group")
 
