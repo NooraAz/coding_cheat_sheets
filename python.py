@@ -2,6 +2,12 @@
 double_number = 3.46789269
 round(double_number)
 
+# rounding with specific number of decimals
+round(1.2345676,2) # --> 1.2
+
+# rounding with keeping ending zeros
+"%.3f" % 1.2300 # --> 1.230
+
 # removing spaces from beginning and end of string
 mystring.strip()
 
