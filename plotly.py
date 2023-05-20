@@ -15,6 +15,9 @@ fig = px.imshow(arr)
 
 # line plot
 fig = px.line(df, x="year", y="lifeExp", title='Life expectancy in Canada')
+# smoothen the line plot
+fig = px.line(df, x="x", y="y",line_shape='spline' )
+
 
 # adding horizontal and vertical lines
 fig.add_hline(y=1)
