@@ -6,6 +6,12 @@ pyrosetta.rosetta.core.import_pose.pose_from_file(file_path)
 # getting coordinates of an atom in pose
 mypose.residue(i).xyz(mypose.residue(i).atom_index('O'))
 
+# number of atoms in a residue
+myopse.residue(i).natoms() 
+
+# atom element for atom index 'a' in residue 'i'
+mypose.residue(i).atom_type(a).element()
+
 ## getting torsion angle between 4 atoms
 # method 1 - error: can't find degree of freedom
 atom1 = #atomID
