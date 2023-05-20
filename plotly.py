@@ -13,10 +13,13 @@ for n,l in zip(names,lists):
 # heatmap (matrix)
 fig = px.imshow(arr)
 
-# line plot
+######## line plot
 fig = px.line(df, x="year", y="lifeExp", title='Life expectancy in Canada')
 # smoothen the line plot
 fig = px.line(df, x="x", y="y",line_shape='spline' )
+# showing points on line
+fig = px.line(df, x="x", y="y",markers=True)
+
 
 
 # adding horizontal and vertical lines
