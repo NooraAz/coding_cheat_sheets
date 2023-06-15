@@ -21,3 +21,6 @@ list(G.neighbors(n))
 # changing attribute of a single node
 # n is node label
 nx.set_node_attributes(G, {n:65}, 'weight')
+
+# getting connected components
+S = [G.subgraph(c).copy() for c in nx.connected_components(G)]
