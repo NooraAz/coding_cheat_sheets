@@ -17,3 +17,7 @@ G.remove_edges_from(edge_list)
 G.neighbors(n) 
 # it returns an iterable object, so you can easily convert it to list 
 list(G.neighbors(n))
+
+# changing attribute of a single node
+# n is node label
+nx.set_node_attributes(G, {n:65}, 'weight')
