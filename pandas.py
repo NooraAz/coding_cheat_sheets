@@ -31,3 +31,7 @@ df = df.drop(['col1', 'col2'], axis=1)
 
 # reset indices after removing rows or changing order
 df.reset_index(inplace=True)
+
+# printing all rows neatly 
+with pd.option_context('display.max_rows', None, 'display.max_columns', None,'display.precision', 3):
+    print(df)
