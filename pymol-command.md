@@ -19,3 +19,7 @@ rotating molecule (based on origion)
     rotate x, 45, object-name
     rotate y, 45, object-name 
     rotate z, 45, object-name 
+
+getting coordinates of an atom
+
+    iterate_state 1, <selection_name>, print x,y,z
