@@ -24,3 +24,6 @@ nx.set_node_attributes(G, {n:65}, 'weight')
 
 # getting connected components
 S = [G.subgraph(c).copy() for c in nx.connected_components(G)]
+
+# checking if there is a path between two nodes
+nx.has_path(G,n1,n2)
