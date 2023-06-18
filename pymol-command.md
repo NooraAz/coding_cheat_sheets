@@ -23,3 +23,7 @@ rotating molecule (based on origion)
 getting coordinates of an atom
 
     iterate_state 1, <selection_name>, print x,y,z
+
+Change color with hex 
+
+    color 0x006600, <selection-name>
