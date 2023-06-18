@@ -52,6 +52,9 @@ fig.update_traces(marker_color='rgba(255, 182, 193, .9)')
 # changing color of histogram bars
 fig = px.histogram(df, x="total_bill", color="sex" ,color_discrete_sequence=['red','blue','indianred'])
 
+# changing color of continuous bars
+color_continuous_scale='Bluered_r'
+
 # using themes
 fig.update_layout(template="simple_white") 
 
