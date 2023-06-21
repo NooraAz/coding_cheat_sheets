@@ -10,3 +10,7 @@ removing extra " .00" from silent files:
 merging files
 
     cat *.txt > merged_resloops.txt
+
+file transfer
+
+    scp remote_username@server:<file-path> file.txt
