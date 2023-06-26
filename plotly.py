@@ -30,6 +30,12 @@ fig.add_vline(x=1)
 fig.add_hrect(y0=0, y1=1, line_width=0, fillcolor="red", opacity=0.2)
 fig.add_vrect(y0=0, y1=1, line_width=0, fillcolor="red", opacity=0.2)
 
+# adding rectangle 
+# relative
+fig.add_shape(type="rect",xref="x domain", yref="y domain",x0=0.6, x1=0.7, y0=0.8, y1=0.9,)
+# absolute
+fig.add_shape(type="rect",x0=0.6, x1=0.7, y0=0.8, y1=0.9,)
+
 # setting range of axes
 fig.update_xaxes(range=[0,1])
 fig.update_yaxes(range=[0,1])
