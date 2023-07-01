@@ -35,3 +35,8 @@ while sf.has_another_pose():
     poses[0][counter] = Pose()
     sf.fill_pose(poses[0][counter])
     counter +=1
+
+
+# getting only one score term
+sfxn = ScoreFunction()
+sfxn.set_weight(rama_prepro, 1.0)
