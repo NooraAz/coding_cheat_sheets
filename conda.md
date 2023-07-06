@@ -1,8 +1,8 @@
-chaching if conda is installed
+checking if conda is installed
 
-  conda info
+    conda info
 
 updating conda
 
-  conda update -n base -c defaults conda
+    conda update -n base -c defaults conda
 
