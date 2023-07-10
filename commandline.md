@@ -7,6 +7,10 @@ removing extra " .00" from silent files:
     sed -i 's/ .00//g' *.silent
     sed -i '' -e 's/ .00//g' *.silent  // on OS X
 
+get first n files in directory
+
+    ls -d $(ls *.err| head -3)
+
 merging files
 
     cat *.txt > merged_resloops.txt
