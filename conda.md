@@ -21,3 +21,7 @@ removing an environment (make sure it's deactivated first)
 list of environments
 
     conda env list
+
+cleaning tmp and cache files
+
+    conda clean --all
