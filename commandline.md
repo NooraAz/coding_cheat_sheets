@@ -11,6 +11,10 @@ get first n files in directory
 
     ls -d $(ls *.err| head -3)
 
+showing hidden files
+
+    ls -la | more
+
 merging files
 
     cat *.txt > merged_resloops.txt
@@ -19,26 +23,33 @@ file transfer
 
     scp remote_username@server:<file-path> file.txt
 
-cat /etc/shells
 Shows all shells
 
-Create a file
-Touch file-name
+    cat /etc/shells
 
+Create a file
+
+    Touch <file-name>
 
 Create an empty file
-fallocate -l 1GB $MYFILE
 
+    fallocate -l 1GB <file-name>
 
 Check if a file exists
--f filename
 
+    -f filename
 
-Chmod +x <file-name.sh> : make the .sh file executable 
+make the .sh file executable 
 
-#! /bin/bash : put in the start of any bash file
+    Chmod +x <file-name.sh>
 
-Echo "hello world" : printing
+put in the start of any bash file
+
+    #! /bin/bash 
+
+print 
+
+    Echo "hello world"
 
 Cat > file.txt : get output
 ctrl+D come out of file
