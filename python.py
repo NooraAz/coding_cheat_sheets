@@ -17,6 +17,9 @@ mystring.split(',')
 # sort a list based on second value of sublist
 mylist.sort(key= lambda x:x[1])
 
+# sort a list based on size of sublists (large to small)
+my_list.sort(key=len,reverse=True)
+
 # sorting sublists of a list
 sorted_lst = [sorted(sublist) for sublist in lst]
 
