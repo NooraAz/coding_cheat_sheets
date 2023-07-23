@@ -10,6 +10,9 @@ fig = go.Figure()
 for n,l in zip(names,lists):
     fig.add_trace(go.Violin(y=df['total_bill'][df['day'] == day],name=n,box_visible=True,meanline_visible=True))
 
+# box plot
+fig = px.box(df,y=df.columns)
+
 # heatmap (matrix)
 fig = px.imshow(arr)
 
