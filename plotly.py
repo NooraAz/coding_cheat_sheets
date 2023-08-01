@@ -14,7 +14,8 @@ for n,l in zip(names,lists):
 fig = px.box(df,y=df.columns)
 
 # heatmap (matrix)
-fig = px.imshow(arr)
+fig = px.imshow(arr)  # 0,0 on top left corner
+fig = px.imshow(arr, origin='lower') # 0,0 on bottom left corner
 
 ######## line plot
 fig = px.line(df, x="year", y="lifeExp", title='Life expectancy in Canada')
