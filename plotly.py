@@ -66,6 +66,11 @@ color_continuous_scale='Bluered_r'
 
 # using themes
 fig.update_layout(template="simple_white") 
+'''
+available themes : 
+['ggplot2', 'seaborn', 'simple_white', 'plotly', 'plotly_white', 
+'plotly_dark', 'presentation', 'xgridoff', 'ygridoff', 'gridon', 'none']
+'''
 
 # animating the plot
 px.scatter(df, x="x", y="y", animation_frame="time", animation_group="group")
