@@ -75,3 +75,9 @@ available themes :
 # animating the plot
 px.scatter(df, x="x", y="y", animation_frame="time", animation_group="group")
 
+# overlapping plots on each other
+fig1 = px.scatter()
+fig2 = px.line()
+fig3 = go.Figure(data=fig1.data + fig2.data)
+fig3.show()
+
