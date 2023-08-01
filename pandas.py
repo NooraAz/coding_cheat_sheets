@@ -1,6 +1,8 @@
 import pandas as pd
 
 df = pd.DataFrame()
+df = pd.DataFrame.from_dict(data) # each item is a column
+df = pd.DataFrame.from_dict(data, orient='index') # each item is a row
 
 # getting rows by their index
 df.take([0,1,2,3])
