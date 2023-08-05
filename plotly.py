@@ -26,9 +26,12 @@ fig = px.line(df, x="x", y="y",markers=True)
 
 
 
-# adding horizontal and vertical lines
+# Adding horizontal and vertical lines
 fig.add_hline(y=1)
 fig.add_vline(x=1)
+
+# Adding diagonal line
+fig.add_shape(type="line",x0=4, y0=0, x1=4, y1=10)
 
 # horizontal and vertical rectangle
 fig.add_hrect(y0=0, y1=1, line_width=0, fillcolor="red", opacity=0.2)
