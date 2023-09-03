@@ -1,6 +1,6 @@
 # importing pose
-## from file
-pyrosetta.rosetta.core.import_pose.pose_from_file(file_path)
+pyrosetta.rosetta.core.import_pose.pose_from_file(file_path) #from file
+pyrosetta.toolbox.rcsb.pose_from_rcsb("8oxz") #from rcsb
 
 
 # getting coordinates of an atom in pose
