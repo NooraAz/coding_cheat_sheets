@@ -2,6 +2,13 @@
 pyrosetta.rosetta.core.import_pose.pose_from_file(file_path) #from file
 pyrosetta.toolbox.rcsb.pose_from_rcsb("8oxz") #from rcsb
 
+####### score #######
+
+# per residue score
+prem = PerResidueEnergyMetric()
+prem.set_scorefunction(score_function)
+prem.set_residue_selector(pyrosetta.rosetta.core.select.residue_selector.ChainSelector(1))
+prem.calculate(wild_pose)
 
 # getting coordinates of an atom in pose
 mypose.residue(i).xyz(mypose.residue(i).atom_index('O'))
