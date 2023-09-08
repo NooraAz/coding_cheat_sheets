@@ -92,3 +92,14 @@ fig = make_subplots(rows=1, cols=2)
 fig.add_trace(go.Scatter(x=X1, y=Y1,row=1, col=1)
 fig.add_trace(go.Scatter(x=X2, y=Y2,row=1, col=2)
 fig.show()
+
+
+#------------ go.Scatter -----------
+go.Scatter(x=X,y=Y,
+    mode='markers',
+    marker=dict(
+        size=sizemap,
+        color=colormap
+    )
+          )
+
