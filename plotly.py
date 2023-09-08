@@ -17,6 +17,12 @@ fig = px.box(df,y=df.columns)
 fig = px.imshow(arr)  # 0,0 on top left corner
 fig = px.imshow(arr, origin='lower') # 0,0 on bottom left corner
 
+#-----scatter plot
+fig = px.scatter(x=X,y=Y,
+                 error_x="e", error_y="e" #Error bars
+                )
+
+
 ######## line plot
 fig = px.line(df, x="year", y="lifeExp", title='Life expectancy in Canada')
 # smoothen the line plot
@@ -47,9 +53,6 @@ fig.add_shape(type="rect",x0=0.6, x1=0.7, y0=0.8, y1=0.9,)
 fig.update_xaxes(range=[0,1])
 fig.update_yaxes(range=[0,1])
 
-# plot size
-fig = px.scatter(df,x='x',y='y',width=800, height=400)
-
 # UPDATE_LAYOUT
 fig.update_layout(
     xaxis_type='category' #type of x-axis data ('linear' (numerical), 'category', 'date')
@@ -58,7 +61,7 @@ fig.update_layout(
 
     plot_bgcolor='rgba(0, 0, 0, 0)' #background color
     template="simple_white" # template ('ggplot2', 'seaborn', 'simple_white', 'plotly', 'plotly_white','plotly_dark', 'presentation', 'xgridoff', 'ygridoff', 'gridon', 'none')
-    
+    width=800, height=400 #plot size
 
 # UPDATE_XAXIS
 fig.update_xaxis(
@@ -99,7 +102,7 @@ go.Scatter(x=X,y=Y,
     mode='markers',
     marker=dict(
         size=sizemap,
-        color=colormap
+        color=colormap #if you want to set the colors, you can input colors as elements of color map
     )
           )
 
