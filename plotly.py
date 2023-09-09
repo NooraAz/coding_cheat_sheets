@@ -56,6 +56,9 @@ fig.update_yaxes(range=[0,1])
 # UPDATE_LAYOUT
 fig.update_layout(
     xaxis_type='category' #type of x-axis data ('linear' (numerical), 'category', 'date')
+
+    log_x=True #logarithmic axes
+    log_y=True
     
     title_text="this is a plot" #plot title
     title="Plot Title",
@@ -67,6 +70,8 @@ fig.update_layout(
     plot_bgcolor='rgba(0, 0, 0, 0)' #background color
     template="simple_white" # template ('ggplot2', 'seaborn', 'simple_white', 'plotly', 'plotly_white','plotly_dark', 'presentation', 'xgridoff', 'ygridoff', 'gridon', 'none')
     width=800, height=400 #plot size
+
+
 
 # UPDATE_XAXIS
 fig.update_xaxis(
