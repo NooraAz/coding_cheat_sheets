@@ -117,11 +117,20 @@ fig.add_trace(go.Scatter(x=x, y=y,mode='lines',)) #line plot
 fig.show()
 
 #------------ go.Scatter -----------
+#-- markers mode
 go.Scatter(x=X,y=Y,
     mode='markers',
     marker=dict(
         size=sizemap,
-        color=colormap #if you want to set the colors, you can input colors as elements of color map
+        color=colormap # If you want to set the colors, you can input colors as elements of the color map
+    )
+          )
+                         
+#-- line mode
+go.Scatter(x=X,y=Y,
+    mode='line',
+    line=dict(
+        color="#ffe476"
     )
           )
 
