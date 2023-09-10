@@ -17,13 +17,18 @@ fig = px.box(df,y=df.columns)
 fig = px.imshow(arr)  # 0,0 on top left corner
 fig = px.imshow(arr, origin='lower') # 0,0 on bottom left corner
 
-#-----scatter plot
+#--------------- Scatter plot
 fig = px.scatter(x=X,y=Y,
                  error_x="e", error_y="e" #Error bars
                 )
 
 
-######## line plot
+#--------------- Line plot
+'''
+Note: Plotly line charts are implemented as connected scatterplots (see below), 
+meaning that the points are plotted and connected with lines
+in the order they are provided, with no automatic reordering.
+'''
 fig = px.line(df, x="year", y="lifeExp", title='Life expectancy in Canada')
 # smoothen the line plot
 fig = px.line(df, x="x", y="y",line_shape='spline' )
