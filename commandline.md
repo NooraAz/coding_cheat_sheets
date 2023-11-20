@@ -51,6 +51,11 @@ print
 
     Echo "hello world"
 
+Getting the number of files in a directory
+
+    ls -1 | wc -l
+    ls *.pdb | wc -l
+
 Cat > file.txt : get output
 ctrl+D come out of file
 
