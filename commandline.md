@@ -56,6 +56,10 @@ Getting the number of files in a directory
     ls -1 | wc -l
     ls *.pdb | wc -l
 
+Searching in multiple files or a directory
+
+    grep 'keyword' *.pdb
+
 Cat > file.txt : get output
 ctrl+D come out of file
 
