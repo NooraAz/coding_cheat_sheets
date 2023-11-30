@@ -37,3 +37,6 @@ df.reset_index(inplace=True)
 # printing all rows neatly 
 with pd.option_context('display.max_rows', None, 'display.max_columns', None,'display.precision', 3):
     print(df)
+
+# exporting dataframe to CSV file
+df.to_csv('path/to/saving', index=False)
