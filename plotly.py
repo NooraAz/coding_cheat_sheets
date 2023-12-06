@@ -103,6 +103,9 @@ fig2 = px.line()
 fig3 = go.Figure(data=fig1.data + fig2.data)
 fig3.show()
 
+# saving the plot as an image
+fig.write_image("figure.png")
+
 #-------- Subplots -------------
 #---seperate
 from plotly.subplots import make_subplots
@@ -138,4 +141,6 @@ go.Scatter(x=X,y=Y,
         color="#ffe476"
     )
           )
+
+                    
 
