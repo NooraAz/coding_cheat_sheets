@@ -18,14 +18,14 @@ showing hidden files
 showing files sorted by ...
 
     ls	#by name, alphabetical order (1 < 11 < 2)
-    -r	reverse order
-    -U	no order
-    -v	by name, natural order (1 < 2 < 11)
-    -S	by size, largest first
-    -X	by extension, alphabetically
-    -t	by last modification date (mtime), newer first
-    -c	by last change date (ctime), newer first
-    -u	by last access date (atime), newer first
+    ls -r	reverse order
+    ls -U	no order
+    ls -v	by name, natural order (1 < 2 < 11)
+    ls -S	by size, largest first
+    ls -X	by extension, alphabetically
+    ls -t	by last modification date (mtime), newer first
+    ls -c	by last change date (ctime), newer first
+    ls -u	by last access date (atime), newer first
 
 merging files
 
