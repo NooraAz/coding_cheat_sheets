@@ -1,4 +1,4 @@
-Getting size of a directory:
+Getting the size of a directory:
 
     du -sh <file-path>
     
@@ -7,13 +7,25 @@ removing extra " .00" from silent files:
     sed -i 's/ .00//g' *.silent
     sed -i '' -e 's/ .00//g' *.silent  // on OS X
 
-get first n files in directory
+get the first n files in a directory
 
     ls -d $(ls *.err| head -3)
 
 showing hidden files
 
     ls -la | more
+
+showing files sorted by ...
+
+    ls	#by name, alphabetical order (1 < 11 < 2)
+    -r	reverse order
+    -U	no order
+    -v	by name, natural order (1 < 2 < 11)
+    -S	by size, largest first
+    -X	by extension, alphabetically
+    -t	by last modification date (mtime), newer first
+    -c	by last change date (ctime), newer first
+    -u	by last access date (atime), newer first
 
 merging files
 
