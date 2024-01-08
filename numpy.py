@@ -35,3 +35,8 @@ result = np.multiply(arr1,arr2)
  arr.transpose()
  arr.T
 
+#----- reading files
+
+# second column
+np.loadtxt("myfile.txt")[:, 1]
+
