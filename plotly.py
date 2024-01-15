@@ -1,4 +1,5 @@
 import plotly.express as px
+import plotly.graph_objects as go
 
 # histogram
 fig = px.histogram(df, x='col1')
