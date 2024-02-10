@@ -1,0 +1,3 @@
+<!-- This is how you comment out in xml -->
+<!-- all values assigned to attributes in xml must be inside "quotation marks". even if it's a number or float. -->
+<!-- start reading a rosetta script from PROTOCOL section. actions are sequentially performed. -->
