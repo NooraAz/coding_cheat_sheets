@@ -1,16 +1,16 @@
 #!bin/bash/ 
-Getting the size of a directory:
-
-    du -sh <file-path>
+# Getting the size of a directory:
+du -sh <file-path>
     
-removing extra " .00" from silent files:
+# removing extra " .00" from silent files:
+sed -i 's/ .00//g' *.silent
+sed -i '' -e 's/ .00//g' *.silent  # on OS X
 
-    sed -i 's/ .00//g' *.silent
-    sed -i '' -e 's/ .00//g' *.silent  // on OS X
+#get the first n files in a directory
+ls -d $(ls *.err| head -3)
 
-get the first n files in a directory
-
-    ls -d $(ls *.err| head -3)
+# get the number of columns in a file
+cat file.txt | awk '{print NF; exit}'
 
 showing hidden files
 
@@ -288,3 +288,4 @@ done
 
 # version of linux
 cat /etc/os-release
+
