@@ -1,3 +1,4 @@
+#!bin/bash/ 
 Getting the size of a directory:
 
     du -sh <file-path>
@@ -285,4 +286,5 @@ do
  echo "Hello $i"
 done
 
-
+# version of linux
+cat /etc/os-release
