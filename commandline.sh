@@ -12,6 +12,9 @@ ls -d $(ls *.err| head -3)
 # get the number of columns in a file
 cat file.txt | awk '{print NF; exit}'
 
+# showing all python installed packages
+pip list
+
 showing hidden files
 
     ls -la | more
