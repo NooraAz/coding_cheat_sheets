@@ -8,6 +8,10 @@ round(1.2345676,2) # --> 1.2
 # rounding with keeping ending zeros
 "%.3f" % 1.2300 # --> 1.230
 
+# using {} in formatted string
+name = 'Noora'
+print(f"{{ Hello {name} }}") # { Hello Noora }
+
 # removing spaces from the beginning and end of string
 mystring.strip()
 
