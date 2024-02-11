@@ -13,6 +13,9 @@ text_files = [f for f in os.listdir(path) if f.endswith('.txt')]
 # -> ['file','.txt']
 os.path.splittext('file.txt') 
 
-
 # copy file
 os.system('cp source.txt destination.txt')  
+
+# saving output os a command in a variable
+data = os.popen('cat /etc/services').read()
+
