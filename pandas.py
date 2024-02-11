@@ -40,3 +40,7 @@ with pd.option_context('display.max_rows', None, 'display.max_columns', None,'di
 
 # exporting dataframe to CSV file
 df.to_csv('path/to/saving', index=False)
+
+# set a row as column names
+df.columns = df.iloc[1]
+df = df.drop(df.index[1]) #(ensure there are no repetitive indices)
