@@ -12,6 +12,12 @@ ls -d $(ls *.err| head -3)
 # get the number of columns in a file
 cat file.txt | awk '{print NF; exit}'
 
+# get the second line of a file
+cat file.txt | awk 'FNR == 2 {print}'
+
+# get the second column of a file
+cat file.txt | awk '{print $2}'
+
 # showing all python installed packages
 pip list
 
