@@ -22,8 +22,12 @@ cat file.txt | awk '{print $2}'
 pip list
 
 # find a file or directory
-find -type d -name dirname # directory
-find -type f -name filename # file
+find -type d -name dirname                  # directory
+find -type f -name filename                 # file
+
+# check if a file or directory exists
+test -d /etc && echo "True".                # directory
+test -f /etc/resolv.conf && echo "True"     # file
 
 showing hidden files
 
