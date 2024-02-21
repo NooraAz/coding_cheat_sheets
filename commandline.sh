@@ -21,6 +21,10 @@ cat file.txt | awk '{print $2}'
 # showing all python installed packages
 pip list
 
+# find a file or directory
+find -type d -name dirname # directory
+find -type f -name filename # file
+
 showing hidden files
 
     ls -la | more
