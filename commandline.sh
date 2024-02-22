@@ -6,20 +6,48 @@ du -sh <file-path>
 sed -i 's/ .00//g' *.silent
 sed -i '' -e 's/ .00//g' *.silent  # on OS X
 
-#get the first 10 files 
+#------- List / ls --------
+# list the first 10 files 
 ls *.err | head -10
 
-# get the number of columns in a file
+# list hidden files
+ls -la | more
+
+# list all python installed packages
+pip list
+
+# list, sorted by ...
+ls	    #by name, alphabetical order (1 < 11 < 2)
+ls -r	# reverse 
+ls -U	# no order
+ls -v	# by name, natural order (1 < 2 < 11)
+ls -S	# by size, largest first
+ls -X	# by extension, alphabetically
+ls -t	# by last modification date (mtime), newer first
+ls -c	# by last change date (ctime), newer first
+ls -u	# by last access date (atime), newer first
+
+# list the number of files in a directory
+ls -1 | wc -l
+ls *.pdb | wc -l
+
+#------- Cast / cat -------
+# cast the number of columns in a file
 cat file.txt | awk '{print NF; exit}'
 
-# get the second line of a file
+# cast the second line of a file
 cat file.txt | awk 'FNR == 2 {print}'
 
-# get the second column of a file
+# cast the second column of a file
 cat file.txt | awk '{print $2}'
 
-# showing all python installed packages
-pip list
+# merging files
+cat *.txt > merged_resloops.txt
+
+# cast all shells
+cat /etc/shells
+
+#------- Find / find ------
 
 # find a file or directory
 find -type d -name dirname                  # directory
@@ -29,62 +57,29 @@ find -type f -name filename                 # file
 test -d /etc && echo "True".                # directory
 test -f /etc/resolv.conf && echo "True"     # file
 
-showing hidden files
+-f filename
+    
+#------- Transfer / scp -----
 
-    ls -la | more
+# file transfer
+scp remote_username@server:<file-path> file.txt
 
-showing files sorted by ...
 
-    ls	#by name, alphabetical order (1 < 11 < 2)
-    ls -r	reverse order
-    ls -U	no order
-    ls -v	by name, natural order (1 < 2 < 11)
-    ls -S	by size, largest first
-    ls -X	by extension, alphabetically
-    ls -t	by last modification date (mtime), newer first
-    ls -c	by last change date (ctime), newer first
-    ls -u	by last access date (atime), newer first
+#------- Creat / touch ----
 
-merging files
+# Create a file
+touch <file-name>
 
-    cat *.txt > merged_resloops.txt
+# Create an empty file
+fallocate -l 1GB <file-name>
 
-file transfer
+# make the .sh file executable 
+chmod +x <file-name.sh>
 
-    scp remote_username@server:<file-path> file.txt
+# print 
+echo "hello world"
 
-Shows all shells
 
-    cat /etc/shells
-
-Create a file
-
-    Touch <file-name>
-
-Create an empty file
-
-    fallocate -l 1GB <file-name>
-
-Check if a file exists
-
-    -f filename
-
-make the .sh file executable 
-
-    Chmod +x <file-name.sh>
-
-put in the start of any bash file
-
-    #! /bin/bash 
-
-print 
-
-    Echo "hello world"
-
-Getting the number of files in a directory
-
-    ls -1 | wc -l
-    ls *.pdb | wc -l
 
 Searching in multiple files or a directory
 
