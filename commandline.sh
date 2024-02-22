@@ -6,8 +6,8 @@ du -sh <file-path>
 sed -i 's/ .00//g' *.silent
 sed -i '' -e 's/ .00//g' *.silent  # on OS X
 
-#get the first n files in a directory
-ls -d $(ls *.err| head -3)
+#get the first 10 files 
+ls *.err | head -10
 
 # get the number of columns in a file
 cat file.txt | awk '{print NF; exit}'
