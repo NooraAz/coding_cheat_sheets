@@ -46,6 +46,9 @@ awk ' { if (NF==32) { print } } ' score.fsc
 
 # merging files
 cat *.txt > merged_resloops.txt
+# merging silent files
+head -3 ab_1000.silent > concat.silent #header from one file
+tail -n+4 *.silent >> concat.silent #data from all files
 
 # cast all shells
 cat /etc/shells
