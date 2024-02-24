@@ -41,6 +41,9 @@ cat file.txt | awk 'FNR == 2 {print}'
 # cast the second column of a file
 cat file.txt | awk '{print $2}'
 
+# lines with 32 columns
+awk ' { if (NF==32) { print } } ' score.fsc
+
 # merging files
 cat *.txt > merged_resloops.txt
 
