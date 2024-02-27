@@ -50,6 +50,11 @@ cat *.txt > merged_resloops.txt
 head -3 ab_1000.silent > concat.silent #header from one file
 tail -n+4 *.silent >> concat.silent #data from all files
 
+# extracting silent from silent
+head -3 concat.silent > concat-rms10.silent
+awk ' { if ($27<=10) { print $32} } ' score-20k-32row.fsc | while read line; do grep $line concat.silent >> concat-rms10.silent ; done
+
+
 # cast all shells
 cat /etc/shells
 
