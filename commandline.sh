@@ -3,8 +3,12 @@
 du -sh <file-path>
     
 # removing extra " .00" from silent files:
+# -i writes back changes to the file
 sed -i 's/ .00//g' *.silent
 sed -i '' -e 's/ .00//g' *.silent  # on OS X
+
+# removing first line of all files
+sed -i '1d' SMD_* 
 
 #------- List / ls --------
 # list the first 10 files 
