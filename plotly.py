@@ -144,4 +144,6 @@ go.Scatter(x=X,y=Y,
           )
 
                     
-
+#-- trendline
+## removind scatter dots after applying trendline
+fig.update_traces(visible=False, selector=dict(mode="markers"))
