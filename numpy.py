@@ -32,11 +32,16 @@ result = np.multiply(arr1,arr2)
 
 # matrix transpose
 # needs double bracket for 1D lists
- arr.transpose()
- arr.T
+arr.transpose()
+arr.T
+
+# getting 5 random numbers between 0 and 100
+numbers = np.random.randint(100, size=(5))
 
 #----- reading files
 
 # second column
 np.loadtxt("myfile.txt")[:, 1]
+
+
 
