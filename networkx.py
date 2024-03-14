@@ -29,3 +29,5 @@ S = [G.subgraph(c).copy() for c in nx.connected_components(G)]
 
 # checking if there is a path between two nodes
 nx.has_path(G,n1,n2)
+
+# layouts
