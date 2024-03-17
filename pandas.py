@@ -30,6 +30,8 @@ df.loc[len(df)] = [value1,value2,value3]
 df = df.drop([0, 1])
 # removing columns
 df = df.drop(['col1', 'col2'], axis=1)
+# removing rows with Nan value in a specific column
+df = df[df['col1'].notna()]
 
 # reset indices after removing rows or changing order
 df.reset_index(inplace=True)
