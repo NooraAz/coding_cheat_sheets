@@ -24,4 +24,13 @@ pi = M_PI
 // creating a namaspace
 namespace namespace1{
     // whatever
-}
+};
+
+// using a member of another name space
+// 1. including the whole namespace in the beginning (not a good practice for std)
+using namespace std;
+// 2. including the specific member in the beginning
+using std::cout;
+using std::endl;
+// 3. adressing the namespace in each instance of using member
+std::cout << 300 << std::endl;
