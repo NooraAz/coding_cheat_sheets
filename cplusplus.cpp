@@ -20,3 +20,8 @@ fill(my_vector.begin(),my_vector.end(),0)
 // Pi 
 #include <math.h>
 pi = M_PI
+
+// creating a namaspace
+namespace namespace1{
+    // whatever
+}
