@@ -1,20 +1,26 @@
 import numpy as np
 
-# create a 2x2 empty boolean type array
-arr = np.empty((2,2),bool)
+# ------- create an array ------------
+# Initializing arrays :
+np.empty((2,2),bool) # boolean
+np.full((2,2),False) # all False
+np.zeros((2, 2))     # all zero
+np.linspace(1,20,20) # linearly spaced (start,stop,number of elements)
+np.arange(0,1,0.1)   # linearlr spaced (start,stop,step)
+np.random.randn(2,2) # array of shape (2,2) filled with random floats 
+# sampled from a univariate Gaussian distribution of mean 0 and variance 1
+np.diag(v) # create a diagonal matrix with values of v as its diagonal values
 
-# create an all-False array
-arr = np.full((2,2),False)
 
+# -------- array transformations ------
 # changing shape of array
 arr = arr.reshape((3, 2))
 
+# -------- solving matrix --------------
+np.linalg.solve(a, b) # finds x for ax = b
+
 # gettig unique values and their count from an a list
 values, counts = np.unique(arr, return_counts= True)
-
-# range of float numbers
-# (start,stop,step)
-np.arange(0,1,0.1)
 
 # deleting a row or column
 numpy.delete(arr, row_index, axis=0)
