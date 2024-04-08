@@ -34,3 +34,8 @@ using std::cout;
 using std::endl;
 // 3. adressing the namespace in each instance of using member
 std::cout << 300 << std::endl;
+
+// if not defined
+#ifndef _ENGINE_H
+// define it
+#define _ENGINE_H
