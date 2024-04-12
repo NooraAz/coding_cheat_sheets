@@ -10,6 +10,10 @@ sed -i '' -e 's/ .00//g' *.silent  # on OS X
 # removing first line of all files
 sed -i '1d' SMD_* 
 
+# loop + unzip 
+for i in {1..10}; do tar -xzf file$i.tar.gz; done
+
+
 #------- List / ls --------
 # list the first 10 files 
 ls *.err | head -10
