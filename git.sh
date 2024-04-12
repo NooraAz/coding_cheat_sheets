@@ -27,6 +27,11 @@ git branch
 # the history is saved in .git folder. 
 # don't change anything other than config file. 
 
+# locating the change by commit-id
+git diff-tree -r <commit-id>
+
+# visualizing branches
+git log --oneline --graph
 
 # getting histrory of changes
 git log
