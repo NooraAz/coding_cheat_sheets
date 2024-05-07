@@ -10,6 +10,9 @@ sed -i '' -e 's/ .00//g' *.silent  # on OS X
 # removing first line of all files
 sed -i '1d' SMD_* 
 
+# remove all line beginning with #
+sed -i '/^#/d' filepath
+
 # loop + unzip 
 for i in {1..10}; do tar -xzf file$i.tar.gz; done
 
