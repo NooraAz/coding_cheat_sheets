@@ -2,6 +2,16 @@
 pyrosetta.rosetta.core.import_pose.pose_from_file(file_path) #from file
 pyrosetta.toolbox.rcsb.pose_from_rcsb("8oxz") #from rcsb
 
+# relax pose
+sfxn = get_fa_scorefxn()
+fr = pyrosetta.rosetta.protocols.relax.FastRelax() #initiating the FastRelax object
+fr.set_scorefxn(sfxn) #setting the score function
+fr.apply(pose)
+
+# get value of a per-residue-metric for all residues
+metric = pyrosetta.rosetta.core.simple_metrics.per_residue_metrics.MyMetric()
+values = [float(value) for key,value in metric.calculate(pose).items()]
+
 ####### score #######
 
 # per residue score
