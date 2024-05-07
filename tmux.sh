@@ -4,6 +4,10 @@ tmux new -s the_name
 # getting all commands in tmux 
 tmux list-commands
 
+# entering into a previosly made session (attaching)
+tmux attach -t <session_name_or_number>
+
+
 # all commands
 attach-session (attach) [-dEr] [-c working-directory] [-t target-session]
 bind-key (bind) [-cnr] [-T key-table] key command [arguments]
