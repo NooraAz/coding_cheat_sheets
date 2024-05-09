@@ -16,6 +16,12 @@ sed -i '/^#/d' filepath
 # loop + unzip 
 for i in {1..10}; do tar -xzf file$i.tar.gz; done
 
+# loop (multiple line)
+for i in 1 2 3 4 5
+do
+echo "Hello $i"
+done
+
 
 #------- List / ls --------
 # list the first 10 files 
@@ -101,7 +107,10 @@ chmod +x <file-name.sh>
 # print 
 echo "hello world"
 
+#-------- other ----------
 
+# wait (seconds)
+sleep 10 
 
 Searching in multiple files or a directory
 
@@ -239,10 +248,10 @@ esac
 done 
 
 
-ctrl c is used to kill a process. It terminates your program. ctrl z is used to pause the process. It will not terminate your program, it will keep your program in the background.
+ctrl c is used to kill a process. It terminates your program. 
+ctrl z is used to pause the process. It will not terminate your program, it will keep your program in the background.
 
-Wait for 10 seconds
-Sleep 10 
+
 
 
 Show all running jobs
@@ -310,15 +319,6 @@ ctrl+b+$ → rename the session
 
 Kill a session
 tmux kill-session -t $DESIGNATION
-
-
-For loop
-
-#!/bin/bash
-for i in 1 2 3 4 5
-do
- echo "Hello $i"
-done
 
 # version of linux
 cat /etc/os-release
