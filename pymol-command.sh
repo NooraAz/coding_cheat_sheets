@@ -21,6 +21,8 @@ iterate_state 1, <selection_name>, print x,y,z
 # Change color with hex 
 color 0x006600, <selection-name>
 
+# increases the number of cartoon segments
+set cartoon_sampling, 10
 
 # Selection based on distance
 ## [select] [by residue] [all atoms, including HETATMs] [within 3 Å of any atom in residue 63]
