@@ -50,3 +50,6 @@ df = df.drop(df.index[1]) #(ensure there are no repetitive indices)
 # heatmap
 df_res.apply(pd.to_numeric).style.background_gradient(cmap='Viridis')
 df.style.background_gradient(cmap ='viridis').set_properties(**{'font-size': '20px'}) 
+
+# aggregating multiple columns together
+df['new column'] = df[list_of_columns].agg(''.join, axis=1)
