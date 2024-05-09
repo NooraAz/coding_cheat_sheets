@@ -41,3 +41,7 @@ try:
 except Exception as e:
   print(e) #print error
   pass # ignore error
+
+# counting a charachter in a string 
+s = "banana"
+s.count('a')
