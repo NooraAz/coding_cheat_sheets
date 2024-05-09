@@ -24,6 +24,9 @@ color 0x006600, <selection-name>
 # increases the number of cartoon segments
 set cartoon_sampling, 10
 
+# Turn up the surface quality
+set surface_quality, 2
+
 # Selection based on distance
 ## [select] [by residue] [all atoms, including HETATMs] [within 3 Å of any atom in residue 63]
 ## byresidue = byresi = byres = br. 
