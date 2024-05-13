@@ -22,6 +22,8 @@ do
 echo "Hello $i"
 done
 
+# loop range of numbers with steps (from 0 to 10, step size = 2)
+for i in `seq 0 2 10`; do echo $i; done
 
 #------- List / ls --------
 # list the first 10 files 
