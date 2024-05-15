@@ -4,5 +4,5 @@ Conversion of R-S to L-D:
 - Only for CYS: L = R, D = S
 
 DLAAs = ['A','C','D','E','F','G','H','I','K','L','M','N','P','Q','R','S','T','V','W','Y' \
-         'a','c','d','e','f','g','h','i','k','l','m','n','p','q','r','s','t','v','w','y']
+         'a','c','d','e','f','h','i','k','l','m','n','p','q','r','s','t','v','w','y']
 
