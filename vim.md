@@ -13,3 +13,7 @@ split window horizontal            -> :sp    / ctrl+w+s
 split window vertical              -> :vsp   /  ctrl+w+v
 moving between split windows       -> crtl+w
 
+paste without indentation          -> :set paste
+
+showing line numbers.              -> :set nu / :set number
+unshowing line numbers.            -> :set nonu / :set nonumber
