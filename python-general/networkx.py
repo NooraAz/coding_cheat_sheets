@@ -1,7 +1,8 @@
 import networkx as nx
 
 # Convert adjacency matrix to graph
-nx.convert_matrix.from_numpy_matrix(arr)
+nx.convert_matrix.from_numpy_matrix(arr) # older than 3.0
+nx.from_numpy_array(arr) # 3.0 and newer
 
 # drawing with positions 
 nx.draw(G, pos=nx.kamada_kawai_layout(G))
