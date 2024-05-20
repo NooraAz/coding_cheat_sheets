@@ -69,3 +69,28 @@ set ray_trace_color, black
 unset depth_cue
 
 ray
+
+# ---------- make a movie with scenes -----------
+mset 1x60 # the length of video, by frames
+# set the scene that you like and save it
+scene 001, store
+# set the next scene and save it
+scene 002, store
+# store scene 001 at frame 1
+mview store,  1, scene=001
+# store scene 002 at frame 30
+mview store, 30, scene=002 
+# play 
+mplay
+
+
+# ---------- make a movie with view (camera movement) -----------
+mset 1x60 # the length of video, by frames
+# set the view point that you like and
+# store the view point at frame 1
+mview store,  1
+# next one
+mview store, 30
+# play 
+mplay
+
