@@ -11,10 +11,16 @@ nx.draw(G, pos=nx.kamada_kawai_layout(G))
 G.remove_node(n)
 G.remove_nodes_from(nodes_list)
 
+# remove lonely nodes
+G.remove_nodes_from(list(nx.isolates(G)))
+
 # remove edge(s)
 G.remove_edge(u,v)
 edge_list = [(u1,v1),(u2,v2)]
 G.remove_edges_from(edge_list)
+
+# remove self edges
+G.remove_edges_from(list(nx.selfloop_edges(G)))
 
 # Getting neighbors of a node
 G.neighbors(n) 
