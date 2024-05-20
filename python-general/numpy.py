@@ -49,5 +49,8 @@ numbers = np.random.randint(100, size=(5))
 # second column
 np.loadtxt("myfile.txt")[:, 1]
 
+# convert matrix to bool matrix conditional 
+new matrix = old_matrix != 0 # anything !=0 will be set to true
+
 
 
