@@ -12,6 +12,8 @@ deletes all lines after the cursor -> dG
 split window horizontal            -> :sp    / ctrl+w+s
 split window vertical              -> :vsp   /  ctrl+w+v
 moving between split windows       -> crtl+w
+split with another file            -> :split file.txt
+split with another file vertical   -> :vsplit file.txt
 
 paste without indentation          -> :set paste
 
