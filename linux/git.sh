@@ -20,34 +20,34 @@ git commit # for multi line
 ## pushing
 git push 
 
-# show the current branch
-git rev-parse --abbrev-ref HEAD
-git branch
+git branch # show the current branch
+git branch --column
 
 # the history is saved in .git folder. 
 # don't change anything other than config file. 
 
-# locating the change by commit-id
-git diff-tree -r <commit-id>
+git column
 
-# difference between current branch and another one
-git diff <branch-name> 
+git config gpg.format ssh
+git config --global reverse.enabled true # reuse recorded resolution
+git config --global column.ui auto
+git config --global branch.sort -committerdate
 
-# only name of files changes
-git diff --name-only
+git diff-tree -r <commit-id> # locating the change by commit-id
+git diff <branch-name> # difference between current branch and another one
+git diff --name-only # only name of files changes
+git diff --compact-summary # names of files and number of changes lines in each
+git diff --word-diff #word based 
+git diff --cached # viewing the changes in staging area
 
-# names of files and number of changes lines in each
-git diff --compact-summary
 
-# visualizing branches
-git log --oneline --graph
-
-# getting histrory of changes
-git log
+git log --oneline --graph # visualizing branches
+git log # getting histrory of changes
 git log -p #all previous commits
 git log --graph
 git log --oneline
 git log --grep='example'
+git log -S
 
 git checkout $branchname
 
@@ -60,11 +60,22 @@ git restore --staged example.txt # getting back from stage area to untracked
 #renaming files
 git mv
 
-# viewing the changes in staging area
-git diff --cached
-
 # making git ignore files
 # create a file called .gitignore in root folder
 # add pathes that need to be ignored there.
 
 # merge conflict issues (?)
+
+# others
+git push --force-with-lease
+git push --signed
+git maintainance
+git maintainance start
+git ls-remote
+git blame -w
+git blame -C
+git blame -c-c
+git blame -c-c-c
+git reflog #log of reerences
+git rebase -i
+git rev-parse --abbrev-ref HEAD
