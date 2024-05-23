@@ -11,7 +11,7 @@ deletes all lines after the cursor -> dG
 
 split window horizontal            -> :sp    / ctrl+w+s
 split window vertical              -> :vsp   /  ctrl+w+v
-moving between split windows       -> crtl+w
+moving between split windows       -> crtl+W
 split with another file            -> :split file.txt
 split with another file vertical   -> :vsplit file.txt
 
