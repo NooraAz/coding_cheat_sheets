@@ -30,6 +30,15 @@ git branch
 # locating the change by commit-id
 git diff-tree -r <commit-id>
 
+# difference between current branch and another one
+git diff <branch-name> 
+
+# only name of files changes
+git diff --name-only
+
+# names of files and number of changes lines in each
+git diff --compact-summary
+
 # visualizing branches
 git log --oneline --graph
 
