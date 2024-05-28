@@ -1,5 +1,3 @@
-# coding_cheat_sheets
-
 <h3 align="center">
 	Coding Cheat Sheets
 </h3>
