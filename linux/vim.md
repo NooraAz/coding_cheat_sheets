@@ -19,3 +19,6 @@ paste without indentation          -> :set paste
 
 showing line numbers.              -> :set nu / :set number
 unshowing line numbers.            -> :set nonu / :set nonumber
+
+get vim version
+`vim --version`
