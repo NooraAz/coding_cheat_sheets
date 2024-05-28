@@ -7,6 +7,11 @@ tmux list-commands
 # entering into a previosly made session (attaching)
 tmux attach -t <session_name_or_number>
 
+# killing all sessions
+tmux kill-server
+
+# killing one session
+tmux kill-session -t <target-session>
 
 # all commands
 attach-session (attach) [-dEr] [-c working-directory] [-t target-session]
@@ -30,8 +35,6 @@ has-session (has) [-t target-session]
 if-shell (if) [-bF] [-t target-pane] shell-command command [command]
 join-pane (joinp) [-bdhv] [-p percentage|-l size] [-s src-pane] [-t dst-pane]
 kill-pane (killp) [-a] [-t target-pane]
-kill-server
-kill-session [-aC] [-t target-session]
 kill-window (killw) [-a] [-t target-window]
 last-pane (lastp) [-de] [-t target-window]
 last-window (last) [-t target-session]
