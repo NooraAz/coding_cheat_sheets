@@ -5,6 +5,8 @@ Going to the end of the file       -> G
 Going to line n                    -> nG
 Going to the beggining of the file -> gg
 
+copying the current line           -> yy
+
 deletes the current line.          -> dd
 deletes n starting at the cursor   -> ndd 
 deletes all lines after the cursor -> dG 
