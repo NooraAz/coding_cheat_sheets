@@ -5,6 +5,16 @@ Going to the end of the file       -> G
 Going to line n                    -> nG
 Going to the beggining of the file -> gg
 
+move n chars forward               -> nl / n[forward-key]
+move n chars backward              -> nh / n[backward-key]
+move n lines up                    -> nj / n[up-key]
+move n lines down                  -> nk / n[down-key]
+
+move n chars forward (go to next line if this line finished)
+                                   -> n[space]
+move n chars backward (go to previous line if this line finished)
+                                   -> n[backspace]
+                                   
 copying the current line           -> yy
 
 deletes the current line.          -> dd
