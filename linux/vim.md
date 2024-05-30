@@ -14,7 +14,17 @@ move n chars forward (go to next line if this line finished)
                                    -> n[space]
 move n chars backward (go to previous line if this line finished)
                                    -> n[backspace]
-                                   
+
+move cursor Forward full page      -> CTRL+f
+move cursor Backwards full page    -> CTRL+b
+move cursor Up half page           -> CTRL+u
+move cursor Down half page.        -> CTRL+d
+move screen so cursor is at Top.   -> zt
+move screen so cursor is at Bottom -> zb
+
+center screen on cursor            -> zz 
+save document and quit             -> ZZ 
+
 copying the current line           -> yy
 
 deletes the current line.          -> dd
