@@ -37,6 +37,15 @@ moving between split windows       -> crtl+W
 split with another file            -> :split file.txt
 split with another file vertical   -> :vsplit file.txt
 
+There are several window commands that allow you to change split window size:
+
+Ctrl+W +/-: increase/decrease height (ex. 20<C-w>+)
+Ctrl+W >/<: increase/decrease width (ex. 30<C-w><)
+Ctrl+W _: set height (ex. 50<C-w>_)
+Ctrl+W |: set width (ex. 50<C-w>|)
+Ctrl+W =: equalize width and height of all windows
+See also: :help CTRL-W
+
 paste without indentation          -> :set paste
 
 showing line numbers.              -> :set nu / :set number
