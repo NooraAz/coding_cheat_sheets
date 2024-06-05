@@ -51,5 +51,9 @@ paste without indentation          -> :set paste
 showing line numbers.              -> :set nu / :set number
 unshowing line numbers.            -> :set nonu / :set nonumber
 
+stop all terminal output           -> ctrl+s
+back to normal.                    -> ctrl+q
+
 get vim version
 `vim --version`
+
