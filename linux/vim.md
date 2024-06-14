@@ -57,3 +57,9 @@ back to normal.                    -> ctrl+q
 get vim version
 `vim --version`
 
+column editing: 
+1. enter visual mode -> ctrl+v
+2. select rows that you want to change (both cursor and j work)
+3. enter insert mode -> shift+i
+4. write whatever you want (it only shows it on first row, but it will perform it on all after step 5)
+5. press ESC
