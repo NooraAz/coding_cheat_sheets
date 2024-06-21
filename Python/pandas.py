@@ -10,7 +10,6 @@ xls = pd.ExcelFile('path_to_file.xlsx')
 df1 = pd.read_excel(xls, 'Sheet1')
 df2 = pd.read_excel(xls, 'Sheet2')
 
-
 df = pd.DataFrame()
 df = pd.DataFrame.from_dict(data) # each item is a column
 df = pd.DataFrame.from_dict(data, orient='index') # each item is a row
