@@ -70,13 +70,16 @@ fig.update_layout(
     title="Plot Title",
     xaxis_title="X Axis Title",
     yaxis_title="Y Axis Title",
+
     legend_title="Legend Title",
+    showlegend=False,
+
     font=dict(family="Courier New, monospace",size=18,color="RebeccaPurple")
 
     plot_bgcolor='rgba(0, 0, 0, 0)' #background color
     template="simple_white" # template ('ggplot2', 'seaborn', 'simple_white', 'plotly', 'plotly_white','plotly_dark', 'presentation', 'xgridoff', 'ygridoff', 'gridon', 'none')
     width=800, height=400 #plot size
-
+)
 
 
 # UPDATE_XAXIS
