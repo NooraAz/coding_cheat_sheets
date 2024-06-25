@@ -1,0 +1,4 @@
+import nglview as ng
+
+view = ng.show_structure_file("input/1fjs.pdb")
+view
