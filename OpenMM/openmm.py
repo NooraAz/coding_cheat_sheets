@@ -3,21 +3,34 @@ from openmm import *
 from openmm.unit import *
 from sys import stdout
 
-# loading pdb
-pdb = PDBFile('<path-to-pdb-file>')
+# Getting coordinates
+# --- from PDB
+pose = PDBFile('<path-to-pdb-file>')
+# --- from Amber input file
+amber_pose = AmberInpcrdFile('input.inpcrd')
 
-# define forcefield
+# define forcefield 
+# --- from xml
 forcefield = ForceField('amber14-all.xml', 'amber14/tip3pfb.xml')
+# --- for amber
+amber_forcefield = AmberPrmtopFile('input.prmtop', periodicBoxVectors=inpcrd.boxVectors)
 
 # creating system 
 system = forcefield.createSystem(
-           pdb.topology, 
+           pose.topology, 
            # particle mesh Ewald for the long range electrostatic interactions
+           # other options: NoCutOff
            nonbondedMethod=PME, 
            # 1 nm cutoff for the direct space interactions
            nonbondedCutoff=1*nanometer, 
            # constrain the length of all bonds that involve a H atom
            constraints=HBonds
+        )
+
+system = amber_forcefield.createSystem(
+            nonbondedMethod=PME, 
+            nonbondedCutoff=1*nanometer, 
+            constraints=HBonds
         )
 
 # create the integrator to use for advancing the equations of motion. 
@@ -33,13 +46,13 @@ integrator = LangevinMiddleIntegrator(
 
 # creates a Simulation object
 simulation = Simulation(
-                pdb.topology, 
+                pose.topology, 
                 system, 
                 integrator
             )
 # specifies the initial atom positions for the simulation: 
 # in this case, the positions that were loaded from the PDB file.
-simulation.context.setPositions(pdb.positions)
+simulation.context.setPositions(pose.positions)
 
 # perform a local energy minimization (relaxation)
 simulation.minimizeEnergy()
