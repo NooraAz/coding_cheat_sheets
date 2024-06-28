@@ -16,6 +16,8 @@ sed -i '/^#/d' filepath
 # using / in sed (add \ before special charachters)
 sed -i 's/^/PDB_files\//' unrelaxed_pdb_file_names.txt
 
+#------- for loop -------
+
 # loop + unzip 
 for i in {1..10}; do tar -xzf file$i.tar.gz; done
 
@@ -27,6 +29,20 @@ done
 
 # loop range of numbers with steps (from 0 to 10, step size = 2)
 for i in `seq 0 2 10`; do echo $i; done
+
+# loop over files in a path
+for filename in /Data/*.txt; do
+    for ((i=0; i<=3; i++)); do
+        ./MyProgram.exe "$filename" "Logs/$(basename "$filename" .txt)_Log$i.txt"
+    done
+done
+
+#------ array --------
+
+# convert string to array
+IFS=' ' read -a arr <<< "$line" 
+# select the second element 
+echo ${my_array[2]}
 
 #------- List / ls --------
 # list the first 10 files 
@@ -55,6 +71,9 @@ ls *.pdb | wc -l
 
 # list with printing out the absolute path
 ls | xargs realpath
+
+# save ls results into a variable
+logfile=$(ls *.log | grep "candump" | tail -n 1)
 
 #------- Cast / cat -------
 # cast the number of columns in a file
