@@ -50,6 +50,9 @@ ls -u	# by last access date (atime), newer first
 ls -1 | wc -l
 ls *.pdb | wc -l
 
+# list with printing out the absolute path
+ls | xargs realpath
+
 #------- Cast / cat -------
 # cast the number of columns in a file
 cat file.txt | awk '{print NF; exit}'
