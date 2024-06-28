@@ -13,6 +13,9 @@ sed -i '1d' SMD_*
 # remove all line beginning with #
 sed -i '/^#/d' filepath
 
+# using / in sed (add \ before special charachters)
+sed -i 's/^/PDB_files\//' unrelaxed_pdb_file_names.txt
+
 # loop + unzip 
 for i in {1..10}; do tar -xzf file$i.tar.gz; done
 
