@@ -51,6 +51,9 @@ ls *.err | head -10
 # list hidden files
 ls -la | more
 
+# list only directories
+ls -d */
+
 # list all python installed packages
 pip list
 
