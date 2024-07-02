@@ -42,7 +42,7 @@ done
 # convert string to array
 IFS=' ' read -a arr <<< "$line" 
 # select the second element 
-echo ${my_array[2]}
+echo ${arr[2]}
 
 #------- List / ls --------
 # list the first 10 files 
@@ -73,7 +73,7 @@ ls *.pdb | wc -l
 ls | xargs realpath
 
 # save ls results into a variable
-logfile=$(ls *.log | grep "candump" | tail -n 1)
+logfile=$(ls *.log)
 
 #------- Cast / cat -------
 # cast the number of columns in a file
@@ -139,26 +139,15 @@ echo "hello world"
 # wait (seconds)
 sleep 10 
 
-Searching in multiple files or a directory
-
-    grep 'keyword' *.pdb
-
-Cat > file.txt : get output
-ctrl+D come out of file
-
-append, instead of rewriting
-Cat >> file.txt
-"Text" >> file
-
+# Searching in multiple files or a directory
+grep -rs 'keyword' *.pdb
 
 #commenting
-
-: ‘ multi line commenting’
-
-Cat << heredoctext
-This is text
-New line
-Heredoctext
+''' 
+multi 
+line 
+commenting 
+'''
 
 Count = 10 (variable)
 If [ $count -eq 10 ] (if count == 10) (( > < ))  [ "$count" -eq -gt -lt] && 
@@ -177,26 +166,22 @@ Cancel all running jobs:
 scancel -u $USER
 
 
-list files with specific extension:
-ls | grep .txt
+# list files with specific extension:
+ls *.txt
 
 
-Reverse the commit (recover files)
-git reset --hard HEAD~1
-
-
-Define a function
+# Define a function
 Function name()
 {
 	Echo "hello"
 }
 
 
-Calling the function
+# Calling the function
 name
 
 
-Pass an argument to function
+# Pass an argument to function
 Function name()
 {
 	Echo "hello $1 $2"
@@ -205,42 +190,42 @@ Function name()
 name noora azadvari
 
 
-After calling a function, its variables become global.
+# After calling a function, its variables become global.
 
-Make a folder
+# Make a folder
 mkdir foldername
 mkdir -p foldername
 
 
-Get a input from terminal and save it in a variable
+# Get a input from terminal and save it in a variable
 read variable
 
 
-Check if a directory exists
+# Check if a directory exists
 -d $foldername
 
 
-Read from a file
+# Read from a file
 Whie IFS="" read -r line
 do
 	Echo "$line"
 done < $fileName
 
 
-remove/delete a file
+# remove/delete a file
 rm $fileName
 
 
-remove/delete a folder
+# remove/delete a folder
 rm -r $folderName
 
 
-Download a file with original file name
+# Download a file with original file name
 url = ""
 curl ${url} -O
 
 
-Download a file
+# Download a file
 url = ""
 curl ${url} -o NewName
 
@@ -249,12 +234,12 @@ url = ""
 curl ${url} > NewName
 
 
-Download the header of a file
+# Download the header of a file
 url = ""
 curl -I ${url}
 
 
-Selection menu
+# Selection menu
 select variable in option1 option2
 do 
 echo "select $variable"
@@ -275,17 +260,17 @@ esac
 done 
 
 
-ctrl c is used to kill a process. It terminates your program. 
-ctrl z is used to pause the process. It will not terminate your program, it will keep your program in the background.
+# ctrl c is used to kill a process. It terminates your program. 
+# ctrl z is used to pause the process. It will not terminate your program, it will keep your program in the background.
 
 
 
 
-Show all running jobs
+# Show all running jobs
 jobs
 
 
-Resume a job a background 
+# Resume a job a background 
 bg %1 #job number 1
 
 
@@ -298,22 +283,14 @@ bg %?abc  #refers to a job started by a command containing abc
 bg %-- #specifies the previous job
 
 
-Bring a job to foreground 
+# Bring a job to foreground 
 fg #like bg
 
 
-Screen
+# Screen
 Sudo yum install screen #installing
 
-
-Tmux
-tmux -V #version of tmux
-
-
-Open a new tmux window
-tmux 
-
-
+'''
 ctrl+b+? → showing binding keys → q → quit
 ctrl+b+c → create a new window
 ctrl+b+window number → switch between windows
@@ -333,20 +310,15 @@ ctrl+b+! → make pane full window
 ctrl+b+t → show clock
 ctrl+b+x → close pane
 ctrl+b+d → detach
-
-See what is running while detached
-tmux ls
-
-
-Attach to a tmuc session
-tmux attach -t $DESIGNATION
-
-
-ctrl+b+$ → rename the session
-
-Kill a session
-tmux kill-session -t $DESIGNATION
+'''
 
 # version of linux
 cat /etc/os-release
+
+# adding something to PATH permenantly
+vim ~/.bashrc
+# paste export PATH="my/new/patg:$PATH"
+# save it
+source ~/.bashrc
+
 
