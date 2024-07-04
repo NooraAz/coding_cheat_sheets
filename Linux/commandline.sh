@@ -37,6 +37,9 @@ for filename in /Data/*.txt; do
     done
 done
 
+# loop + get number of lines 
+for file in *.log; do awk 'END { print NR }' $file; done
+
 #------ array --------
 
 # convert string to array
