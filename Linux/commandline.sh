@@ -43,6 +43,9 @@ for file in *.log; do awk 'END { print NR }' $file; done
 # for log files, if it has less than 243 lines, print the file name and numebr of lines
 for file in *.log;do lines=$(awk 'END { print NR }' $file);if (($lines<243));then echo $file;echo $lines;fi; done
 
+# print last line in each file
+for file in *.log; do tail -n 1 $file;done
+
 #------ array --------
 
 # convert string to array
