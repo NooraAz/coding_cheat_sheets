@@ -143,6 +143,14 @@ chmod +x <file-name.sh>
 # print 
 echo "hello world"
 
+#-------- bc calculator --------
+
+# adding two floats
+numone=1.234
+numtwo=0.124
+total=`echo $numone + $numtwo | bc`
+echo $total
+
 #-------- other ----------
 
 # wait (seconds)
@@ -287,7 +295,6 @@ bg %abc #refers to a job started by a command beginning with abc
 
 
 bg %?abc  #refers to a job started by a command containing abc
-
 
 bg %-- #specifies the previous job
 
