@@ -61,12 +61,12 @@ fig.update_yaxes(range=[0,1])
 
 # UPDATE_LAYOUT
 fig.update_layout(
-    xaxis_type='category' #type of x-axis data ('linear' (numerical), 'category', 'date')
+    xaxis_type='category', #type of x-axis data ('linear' (numerical), 'category', 'date')
 
-    log_x=True #logarithmic axes
-    log_y=True
+    log_x=True, #logarithmic axes
+    log_y=True,
     
-    title_text="this is a plot" #plot title
+    title_text="this is a plot", #plot title
     title="Plot Title",
     xaxis_title="X Axis Title",
     yaxis_title="Y Axis Title",
@@ -74,10 +74,10 @@ fig.update_layout(
     legend_title="Legend Title",
     showlegend=False,
 
-    font=dict(family="Courier New, monospace",size=18,color="RebeccaPurple")
+    font=dict(family="Courier New, monospace",size=18,color="RebeccaPurple"),
 
-    plot_bgcolor='rgba(0, 0, 0, 0)' #background color
-    template="simple_white" # template ('ggplot2', 'seaborn', 'simple_white', 'plotly', 'plotly_white','plotly_dark', 'presentation', 'xgridoff', 'ygridoff', 'gridon', 'none')
+    plot_bgcolor='rgba(0, 0, 0, 0)', #background color
+    template="simple_white", # template ('ggplot2', 'seaborn', 'simple_white', 'plotly', 'plotly_white','plotly_dark', 'presentation', 'xgridoff', 'ygridoff', 'gridon', 'none')
     width=800, height=400 #plot size
 )
 
@@ -115,15 +115,15 @@ fig.write_image("figure.png")
 from plotly.subplots import make_subplots
 
 fig = make_subplots(rows=1, cols=2)
-fig.add_trace(go.Scatter(x=X1, y=Y1,row=1, col=1)
-fig.add_trace(go.Scatter(x=X2, y=Y2,row=1, col=2)
+fig.add_trace(go.Scatter(x=X1, y=Y1,row=1, col=1))
+fig.add_trace(go.Scatter(x=X2, y=Y2,row=1, col=2))
 fig.show()
 
 #---overlapped
 fig = go.Figure()
    
-fig.add_trace(go.Scatter(x=x y=x,mode='markers')) #scatter plot
-fig.add_trace(go.Scatter(x=x, y=y,mode='lines+markers', #line with markers))
+fig.add_trace(go.Scatter(x=x, y=x,mode='markers')) #scatter plot
+fig.add_trace(go.Scatter(x=x, y=y,mode='lines+markers')), #line with markers
 fig.add_trace(go.Scatter(x=x, y=y,mode='lines',)) #line plot
 
 fig.show()
