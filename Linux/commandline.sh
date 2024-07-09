@@ -16,6 +16,8 @@ sed -i '/^#/d' filepath
 # using / in sed (add \ before special charachters)
 sed -i 's/^/PDB_files\//' unrelaxed_pdb_file_names.txt
 
+# NOTE: on mac, always pass an empty string after sed -i: sed -i '' 
+
 #------- for loop -------
 
 # loop + unzip 
