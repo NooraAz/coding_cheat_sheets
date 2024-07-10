@@ -66,3 +66,8 @@ df['new column'] = df[list_of_columns].agg(''.join, axis=1)
 
 # group rows based on column name into average of those rows
 df_mean = df.groupby('File name', as_index=False)['Energy'].mean()
+
+# group into mean and std
+df_result = df.groupby(['a'], as_index=False).agg({'c':['mean','std'],'b':'first', 'd':'first'})
+df_result.columns = ['a','c-mean','c-std','b','d']
+df_result.reindex(columns=sorted(df_result.columns))
