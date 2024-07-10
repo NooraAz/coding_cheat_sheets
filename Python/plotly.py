@@ -1,12 +1,19 @@
 import plotly.express as px
 import plotly.graph_objects as go
 
-# histogram
+# ------- histogram ----------
 fig = px.histogram(df, x='col1')
+
 # histogram with different colored data
 fig = px.histogram(df, x="total_bill", color="sex")
 
-# violin plot
+# changing color of histogram bars
+fig = px.histogram(df, x="total_bill", color="sex" ,color_discrete_sequence=['red','blue','indianred'])
+
+# set size of bins (not number of bins)
+fig.update_traces(xbins_size=2)
+
+# --------- violin plot ----------
 fig = go.Figure()
 for n,l in zip(names,lists):
     fig.add_trace(go.Violin(y=df['total_bill'][df['day'] == day],name=n,box_visible=True,meanline_visible=True))
@@ -92,8 +99,7 @@ fig.update_traces(
     marker_color='rgba(255, 182, 193, .9)' # points (/traces) color
 )
 
-# changing color of histogram bars
-fig = px.histogram(df, x="total_bill", color="sex" ,color_discrete_sequence=['red','blue','indianred'])
+ 
 
 # changing color of continuous bars
 color_continuous_scale='Bluered_r'
