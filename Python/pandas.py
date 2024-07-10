@@ -71,3 +71,10 @@ df_mean = df.groupby('File name', as_index=False)['Energy'].mean()
 df_result = df.groupby(['a'], as_index=False).agg({'c':['mean','std'],'b':'first', 'd':'first'})
 df_result.columns = ['a','c-mean','c-std','b','d']
 df_result.reindex(columns=sorted(df_result.columns))
+
+# normalization
+normalized_df=(df-df.min())/(df.max()-df.min()) #min-max
+normalized_df=(df-df.mean())/df.std() #mean
+
+# loc based on inclusion of a string
+df.loc[df['A'].str.contains("PEP")]
