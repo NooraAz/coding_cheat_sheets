@@ -25,13 +25,17 @@ fig = px.box(df,y=df.columns)
 fig = px.imshow(arr)  # 0,0 on top left corner
 fig = px.imshow(arr, origin='lower') # 0,0 on bottom left corner
 
-#--------------- Scatter plot
-fig = px.scatter(x=X,y=Y,
-                 error_x="e", error_y="e" #Error bars
-                )
+#--------------- Scatter plot -------------
+fig = px.scatter(df,x='age',y='performance')
+
+# error bars
+fig = px.scatter(df,x='age',y='performance',error_x="ex", error_y="ey")
+
+# change marker size
+fig.update_traces(marker=dict(size=4))
 
 
-#--------------- Line plot
+#--------------- Line plot -------------
 '''
 Note: Plotly line charts are implemented as connected scatterplots (see below), 
 meaning that the points are plotted and connected with lines
