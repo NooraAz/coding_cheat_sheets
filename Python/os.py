@@ -19,3 +19,5 @@ os.system('cp source.txt destination.txt')
 # saving output os a command in a variable
 data = os.popen('cat /etc/services').read()
 
+# check if a file/path exists
+os.path.exists(path)
