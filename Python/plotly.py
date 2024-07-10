@@ -48,7 +48,13 @@ fig = px.line(df, x="x", y="y",line_shape='spline' )
 fig = px.line(df, x="x", y="y",markers=True)
 
 
+#--------------- Bar plot ---------
+fig = px.bar(df, x='rmsd',y='score')
 
+# not stacking (group barmode)
+fig = px.bar(df, x="sex", y="total_bill",color='smoker', barmode='group')
+
+# --------------
 # Adding horizontal and vertical lines
 fig.add_hline(y=1)
 fig.add_vline(x=1)
