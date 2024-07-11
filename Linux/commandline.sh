@@ -156,13 +156,20 @@ numtwo=0.124
 total=`echo $numone + $numtwo | bc`
 echo $total
 
+# -------- grep ------------
+
+# Searching in multiple files or a directory
+grep -rs 'keyword' *.pdb
+
+# counting the number of lines starting with #
+grep -c "^#" filename.txt
+
 #-------- other ----------
 
 # wait (seconds)
 sleep 10 
 
-# Searching in multiple files or a directory
-grep -rs 'keyword' *.pdb
+
 
 #commenting
 ''' 
