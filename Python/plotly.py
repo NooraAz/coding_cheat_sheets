@@ -28,6 +28,11 @@ fig = px.box(df,y=df.columns)
 fig = px.imshow(arr)  # 0,0 on top left corner
 fig = px.imshow(arr, origin='lower') # 0,0 on bottom left corner
 
+
+# --------- Jitter plot ----------
+
+fig = px.strip(df, x='day', y='tip')
+
 #--------------- Scatter plot -------------
 fig = px.scatter(df,x='age',y='performance')
 
