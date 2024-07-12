@@ -20,8 +20,12 @@ git commit # for multi line
 ## pushing
 git push 
 
+# -------- Branch ------------
 git branch # show the current branch
 git branch --column
+
+# print branches with their heads
+git branch -v 
 
 # the history is saved in .git folder. 
 # don't change anything other than config file. 
