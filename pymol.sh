@@ -33,6 +33,7 @@ set surface_quality, 2
 ## [select] [by residue] [all atoms, including HETATMs] [within 3 Å of any atom in residue 63]
 ## byresidue = byresi = byres = br. 
 select br. all within 3 of resi 63
+select byresidue all within 5 of resi 322
 
 ## [select] [name it Ala63] [by residue] [all atoms, including HETATMs] [within 3 Å of any atom in residue 63]
 select Ala63, br. all within 3 of resi 63
