@@ -27,6 +27,9 @@ git branch --column
 # print branches with their heads
 git branch -v 
 
+# update remote
+git remote update origin --prune
+
 # the history is saved in .git folder. 
 # don't change anything other than config file. 
 
