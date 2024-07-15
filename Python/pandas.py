@@ -31,6 +31,10 @@ df[(df['col'] > 10) | (df['col'] < 1)]
 # sort values by column
 df.sort_values(by=['col1'])
 
+# sort by occurance of values in a column
+df['Frequency'] = df.groupby('CompanyName')['CompanyName'].transform('count')
+df.sort_values(['Frequency', 'CompanyName'], inplace=True, ascending=[False, True])
+
 # adding a row to end of dataframe
 df.loc[len(df)] = [value1,value2,value3]
 
