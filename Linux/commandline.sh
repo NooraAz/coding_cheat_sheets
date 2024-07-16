@@ -173,6 +173,18 @@ ln -s ~/mnt/home/nazadvari/database .
 # check all symlinks in the directory
 find . -type l -ls
 
+# --------- removing / deleting -------
+
+# remove a file
+rm $fileName
+
+# remove a folder
+rm -r $folderName
+
+# remove nsfxxxx files (active session)
+lsof +D . # to get a list of open files
+kill -9 <PID> # killing the session by job's id
+
 #-------- other ----------
 
 # wait (seconds)
@@ -250,12 +262,7 @@ do
 done < $fileName
 
 
-# remove/delete a file
-rm $fileName
 
-
-# remove/delete a folder
-rm -r $folderName
 
 
 # Download a file with original file name
