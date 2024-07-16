@@ -164,6 +164,15 @@ grep -rs 'keyword' *.pdb
 # counting the number of lines starting with #
 grep -c "^#" filename.txt
 
+
+# -------- symlinks ---------
+
+# creating a symlink to a folder
+ln -s ~/mnt/home/nazadvari/database .
+
+# check all symlinks in the directory
+find . -type l -ls
+
 #-------- other ----------
 
 # wait (seconds)
