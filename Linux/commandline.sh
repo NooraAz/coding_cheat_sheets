@@ -86,6 +86,9 @@ ls *.pdb | wc -l
 # list with printing out the absolute path
 ls | xargs realpath
 
+# list showing symlinks if existing and with size(--si) in readable format
+ls -l --si
+
 # save ls results into a variable
 logfile=$(ls *.log)
 
@@ -215,9 +218,6 @@ Cancel all running jobs:
 
 scancel -u $USER
 
-
-# list files with specific extension:
-ls *.txt
 
 
 # Define a function
