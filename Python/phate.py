@@ -1,4 +1,4 @@
-!pip install --user --upgrade phate scprep
+# !pip install --user --upgrade phate scprep
 
 import phate
 import scprep
