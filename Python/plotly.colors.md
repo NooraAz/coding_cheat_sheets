@@ -1,0 +1,1 @@
+![](../images/plotly_colors.png)
