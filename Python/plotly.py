@@ -42,6 +42,10 @@ fig = px.scatter(df,x='age',y='performance',error_x="ex", error_y="ey")
 # change marker size
 fig.update_traces(marker=dict(size=4))
 
+# go scatter
+fig.add_trace(go.Scatter(x=x, y=x,mode='markers'
+             ,name="My Trace" # name of trace in legend
+             ))
 
 #--------------- Line plot -------------
 '''
