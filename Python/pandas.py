@@ -46,6 +46,8 @@ df = df.drop([0, 1])
 df = df.drop(['col1', 'col2'], axis=1)
 # removing rows with Nan value in a specific column
 df = df[df['col1'].notna()]
+# or 
+df.dropna(subset=['col1'])
 
 # reset indices after removing rows or changing order
 df.reset_index(inplace=True)
