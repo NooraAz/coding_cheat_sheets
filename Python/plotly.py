@@ -63,6 +63,10 @@ fig = px.bar(df, x='rmsd',y='score')
 fig = px.bar(df, x="sex", y="total_bill",color='smoker', barmode='group')
 
 # --------------
+
+# sorting alphabetically
+fig.update_xaxes(categoryorder='category ascending')
+
 # Adding horizontal and vertical lines
 fig.add_hline(y=1)
 fig.add_vline(x=1)
