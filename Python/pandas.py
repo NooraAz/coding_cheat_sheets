@@ -28,6 +28,7 @@ df[(df['col'] < 10) & (df['col'] > 1)]
 df[(df['col'] > 10) | (df['col'] < 1)]
 
 
+
 # sort values by column
 df.sort_values(by=['col1'])
 
@@ -62,6 +63,9 @@ df.to_csv('path/to/saving', index=False)
 # set a row as column names
 df.columns = df.iloc[1]
 df = df.drop(df.index[1]) #(ensure there are no repetitive indices)
+
+# renaming columns
+df.rename(columns={"old name": "new name", "B": "c"})
 
 # heatmap
 df_res.apply(pd.to_numeric).style.background_gradient(cmap='Viridis')
