@@ -172,7 +172,7 @@ grep -c "^#" filename.txt
 # -------- symlinks ---------
 
 # creating a symlink to a folder
-ln -s ~/mnt/home/nazadvari/database .
+ln -s ~/mnt/home/nazadvari/databases .
 
 # check all symlinks in the directory
 find . -type l -ls
