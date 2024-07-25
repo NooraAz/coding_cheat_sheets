@@ -30,6 +30,15 @@ git branch -v
 # update remote
 git remote update origin --prune
 
+# new branch + switching to it
+git checkout -b <new_branch_name>
+
+# set upstream branch 
+git push -u origin <new_branch_name>
+# or:
+git push --set-upstream origin <new_branch_name>
+
+# ---------- Other ---------------
 # the history is saved in .git folder. 
 # don't change anything other than config file. 
 
