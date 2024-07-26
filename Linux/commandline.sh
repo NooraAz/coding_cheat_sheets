@@ -191,6 +191,9 @@ kill -9 <PID> # killing the session by job's id
 
 #-------- other ----------
 
+# split by ., remove second part, rename back
+for file in nr_pfilt.fasta*;do parts=(${file//./ });mv $file ${parts[0]}.${parts[2]}.${parts[3]};done
+
 # wait (seconds)
 sleep 10 
 
