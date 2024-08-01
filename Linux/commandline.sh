@@ -86,9 +86,6 @@ ls *.pdb | wc -l
 # list with printing out the absolute path
 ls | xargs realpath
 
-# list showing symlinks if existing and with size(--si) in readable format
-ls -l --si
-
 # save ls results into a variable
 logfile=$(ls *.log)
 
@@ -174,8 +171,14 @@ grep -c "^#" filename.txt
 # creating a symlink to a folder
 ln -s ~/mnt/home/nazadvari/databases .
 
+# remove symlink
+unlink folder-name
+
 # check all symlinks in the directory
 find . -type l -ls
+
+# list showing symlinks if existing and with size(--si) in readable format
+ls -l --si
 
 # --------- removing / deleting -------
 
