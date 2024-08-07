@@ -127,6 +127,11 @@ find . -type f -name "*.py"
 test -d /etc && echo "True".                # directory
 test -f /etc/resolv.conf && echo "True"     # file
 
+if [-f /path/to/file];then echo "exists";fi;
+
+# if a file does not exist
+if [! -f /path/to/file];then echo "doesn't exist";fi;
+
 -f filename
     
 #------- Transfer / scp -----
