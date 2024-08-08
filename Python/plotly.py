@@ -10,8 +10,12 @@ fig = px.histogram(df, x="total_bill", color="sex")
 # changing color of histogram bars
 fig = px.histogram(df, x="total_bill", color="sex" ,color_discrete_sequence=['red','blue','indianred'])
 
-# overlaying 
-fig = px.histogram(df, x="total_bill", color="sex", barmode='overlay')
+
+fig = px.histogram(df, x="total_bill", color="sex"
+                    ,barmode='overlay' # overlaying 
+                    ,bargap=0.2        # gap between bars
+                    )
+
 
 # set size of bins (not number of bins)
 fig.update_traces(xbins_size=2)
