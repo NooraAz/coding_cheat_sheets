@@ -8,6 +8,13 @@ git push --remote-? origin main
 # 2. on your local machine:
 git clone $url
 
+# sparse clone
+git clone --no-checkout <repository-url>
+cd <repository-directory>
+git sparse-checkout init
+git sparse-checkout set <subdirectory-name>
+git checkout main
+
 # local -> global: stage, commit, push
 ## staging
 git add $filename 
