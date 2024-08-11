@@ -70,6 +70,9 @@ fig = px.bar(df, x='rmsd',y='score')
 # not stacking (group barmode)
 fig = px.bar(df, x="sex", y="total_bill",color='smoker', barmode='group')
 
+# width of bars
+fig.update_traces(width=1)
+
 # --------------
 
 # sorting alphabetically
