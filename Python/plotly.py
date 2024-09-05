@@ -115,6 +115,7 @@ fig.update_layout(
     showlegend=False,
 
     font=dict(family="Courier New, monospace",size=18,color="RebeccaPurple"),
+    font_family="Courier New",
 
     plot_bgcolor='rgba(0, 0, 0, 0)', #background color
     template="simple_white", # template ('ggplot2', 'seaborn', 'simple_white', 'plotly', 'plotly_white','plotly_dark', 'presentation', 'xgridoff', 'ygridoff', 'gridon', 'none')
@@ -122,12 +123,15 @@ fig.update_layout(
 )
 
 
-# UPDATE_XAXIS
+# Update axis
 fig.update_xaxis(
     type='category' #type of x-axis data ('linear' (numerical), 'category', 'date')
+    ,tickangles=45   # rotate labels 45 degrees
+    ,automargin=True # if the labels are cut off
 )
+fig.update_yaxes()
 
-#UPDATE_TRACES
+# Update traces
 fig.update_traces(
     marker_color='rgba(255, 182, 193, .9)' # points (/traces) color
 )
