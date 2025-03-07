@@ -26,6 +26,10 @@ values, counts = np.unique(arr, return_counts= True)
 numpy.delete(arr, row_index, axis=0)
 numpy.delete(arr, col_index, axis=1)
 
+# deleting empty columns
+mask = np.all(arr == '', axis=0)
+new_arr = np.delete(arr, np.where(mask)[0], axis=1)
+
 # add values of two lists together (one by one)
 result = np.add(list1,list2)
 # append a list to another one
