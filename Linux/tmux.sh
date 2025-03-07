@@ -13,6 +13,12 @@ tmux kill-server
 # killing one session
 tmux kill-session -t <target-session>
 
+# split panes
+# horizontal -> ctrl+b "
+# vertical   -> ctrl+b %
+
+
+
 # all commands
 attach-session (attach) [-dEr] [-c working-directory] [-t target-session]
 bind-key (bind) [-cnr] [-T key-table] key command [arguments]

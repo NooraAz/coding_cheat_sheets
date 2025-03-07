@@ -49,3 +49,7 @@ s.count('a')
 # progress bar % 
 percent = round((x+1)/len(df_mean_std)*100,2)
 print(f"{percent}%",end='\r', flush=True)
+
+# remove the first element in element
+
+# append to the end of the list

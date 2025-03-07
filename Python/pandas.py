@@ -62,7 +62,7 @@ df_merged = reduce(lambda  left,right: pd.merge(left,right,on=['DATE'],how='oute
 # aggregating multiple columns together
 df['new column'] = df[list_of_columns].agg(''.join, axis=1)
 
-# -------- Removing ----------
+# -------- Removing --------
 
 # removing rows
 df = df.drop([0, 1])
