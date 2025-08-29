@@ -20,6 +20,9 @@ sed -i 's/^/PDB_files\//' unrelaxed_pdb_file_names.txt
 
 #------- for loop -------
 
+# loog + grep
+for i in {0..27}; do grep 'SCORE' CSA-nofilter-75k-$i.silent | wc -l ; done
+
 # loop + unzip 
 for i in {1..10}; do tar -xzf file$i.tar.gz; done
 
@@ -112,6 +115,9 @@ tail -q -n+4 *.silent >> ../concat.silent #data from all files
 head -3 concat.silent > concat-rms10.silent
 awk ' { if ($27<=10) { print $32} } ' score-20k-32row.fsc | while read line; do grep $line concat.silent >> concat-rms10.silent ; done
 
+# finding min / max of a column
+min=`awk 'BEGIN{a=1000}{if ($1<0+a) a=$1} END{print a}' mydata.dat`
+max=`awk 'BEGIN{a=   0}{if ($1>0+a) a=$1} END{print a}' mydata.dat`
 
 # cast all shells
 cat /etc/shells
@@ -378,3 +384,6 @@ vim ~/.bashrc
 source ~/.bashrc
 
 
+# ------- 
+for i in {0..27};do echo $i; echo `awk 'BEGIN{a=1000}{if ($2<0+a) a=$2} END{print a}' CSA-nofilter-75k-$i.silent`;done
+for i in {0..12};do echo $i; echo `awk 'BEGIN{a=1000}{if ($2<0+a) a=$2} END{print a}' CSA-nofilter-$i.silent`;done

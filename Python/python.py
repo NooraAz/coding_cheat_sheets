@@ -34,6 +34,8 @@ text.rjust(5)
 
 # Path to a module
 print(my_module.__file__)
+# module version
+print(my_module.__version__)
 
 # handling errors
 try: 

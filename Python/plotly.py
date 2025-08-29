@@ -75,6 +75,10 @@ fig.update_traces(width=1)
 
 # --------------
 
+#--------------- Pie chart plot ---------
+fig = px.pie(df, values='pop', names='country')
+fig.show()
+
 # sorting alphabetically
 fig.update_xaxes(categoryorder='category ascending')
 
@@ -93,7 +97,7 @@ fig.add_vrect(y0=0, y1=1, line_width=0, fillcolor="red", opacity=0.2)
 # relative
 fig.add_shape(type="rect",xref="x domain", yref="y domain",x0=0.6, x1=0.7, y0=0.8, y1=0.9,)
 # absolute
-fig.add_shape(type="rect",x0=0.6, x1=0.7, y0=0.8, y1=0.9,)
+fig.add_shape(type="rect",x0=0.6, x1=0.7, y0=0.8, y1=0.9)
 
 # setting range of axes
 fig.update_xaxes(range=[0,1])
@@ -191,5 +195,13 @@ go.Scatter(x=X,y=Y,
 
                     
 #-- trendline
+## linear (Ordinary Least Squares)
+fig = px.scatter(df, x="total_bill", y="tip", trendline="ols") 
+'''
+Error: Cannot import name '_centered' from 'scipy.signal.signaltools'
+solution: 
+upgrade statsmodels and relaunch session
+!pip install statsmodels --upgrade
+'''
 ## removind scatter dots after applying trendline
 fig.update_traces(visible=False, selector=dict(mode="markers"))

@@ -57,3 +57,7 @@ while sf.has_another_pose():
 # getting only one score term
 sfxn = ScoreFunction()
 sfxn.set_weight(rama_prepro, 1.0)
+
+#### RMSD #####
+
+pyrosetta.rosetta.core.scoring.CA_rmsd(pose1, pose2)
